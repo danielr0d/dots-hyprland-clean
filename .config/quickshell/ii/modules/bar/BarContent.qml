@@ -82,12 +82,6 @@ Item { // Bar content region
             anchors.fill: parent
             spacing: 10
 
-            LeftSidebarButton { // Left sidebar button
-                Layout.alignment: Qt.AlignVCenter
-                Layout.leftMargin: Appearance.rounding.screenRounding
-                colBackground: barLeftSideMouseArea.hovered ? Appearance.colors.colLayer1Hover : ColorUtils.transparentize(Appearance.colors.colLayer1Hover, 1)
-            }
-
             ActiveWindow {
                 visible: root.useShortenedForm === 0
                 Layout.rightMargin: Appearance.rounding.screenRounding
