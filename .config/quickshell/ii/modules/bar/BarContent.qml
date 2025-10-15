@@ -81,6 +81,12 @@ Item { // Bar content region
             id: leftSectionRowLayout
             anchors.fill: parent
             spacing: 10
+            ClockWidget {
+                showDate: (Config.options.bar.verbose && root.useShortenedForm < 2)
+                Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                Layout.leftMargin: 24
+                Layout.fillWidth: false
+            }
         }
     }
 
@@ -143,9 +149,6 @@ Item { // Bar content region
             BarGroup {
                 id: rightCenterGroupContent
                 anchors.fill: parent
-
-                // Center Clock removed; clock is shown at the right edge instead
-
                 UtilButtons {
                     visible: (Config.options.bar.verbose && root.useShortenedForm === 0)
                     Layout.alignment: Qt.AlignVCenter
@@ -272,14 +275,6 @@ Item { // Bar content region
             Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-            }
-
-            // Clock on the right with margin from edge
-            ClockWidget {
-                showDate: (Config.options.bar.verbose && root.useShortenedForm < 2)
-                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                Layout.rightMargin: Appearance.rounding.screenRounding * 2
-                Layout.fillWidth: false
             }
 
             // Weather
