@@ -81,8 +81,6 @@ Item { // Bar content region
             id: leftSectionRowLayout
             anchors.fill: parent
             spacing: 10
-
-            // ...existing code...
         }
     }
 
@@ -95,20 +93,11 @@ Item { // Bar content region
         }
         spacing: 4
 
-
         BarGroup {
             id: leftCenterGroup
             anchors.verticalCenter: parent.verticalCenter
             implicitWidth: root.centerSideModuleWidth
-
-            // Removed Resources (CPU, RAM, Swap)
-            Media {
-                visible: root.useShortenedForm < 2
-                Layout.fillWidth: true
-            }
         }
-
-        // ...ActiveWindow removed...
 
         VerticalBarSeparator {
             visible: Config.options?.bar.borderless
@@ -296,7 +285,6 @@ Item { // Bar content region
                             id: notificationUnreadCount
                         }
                     }
-                    // Network button removed
                     MaterialSymbol {
                         visible: BluetoothStatus.available
                         text: BluetoothStatus.connected ? "bluetooth_connected" : BluetoothStatus.enabled ? "bluetooth" : "bluetooth_disabled"
