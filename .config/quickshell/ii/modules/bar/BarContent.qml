@@ -63,8 +63,8 @@ Item { // Bar content region
         onScrollUp: root.brightnessMonitor.setBrightness(root.brightnessMonitor.brightness + 0.05)
         onMovedAway: GlobalStates.osdBrightnessOpen = false
         onPressed: event => {
-            if (event.button === Qt.LeftButton)
-                GlobalStates.sidebarLeftOpen = !GlobalStates.sidebarLeftOpen;
+            // Left-click disabled here to prevent opening the left sidebar (translate/AI drawer)
+            // Scroll to change brightness and hover behavior remain intact
         }
 
         // Visual content
