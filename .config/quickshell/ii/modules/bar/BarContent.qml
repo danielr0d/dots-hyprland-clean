@@ -245,7 +245,7 @@ Item { // Bar content region
                     color: Appearance.colors.colOnLayer0
                 }
                 Revealer {
-                    // Notification bell removed per user request
+                    // Sininho fica aq
                 }
                 MaterialSymbol {
                     visible: BluetoothStatus.available

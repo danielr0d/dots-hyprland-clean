@@ -267,7 +267,6 @@ Item { // Bar content region
                         Layout.bottomMargin: indicatorsColumnLayout.realSpacing
                         color: rightSidebarButton.colText
                     }
-                    // Notification unread indicator removed per user request
                     MaterialSymbol {
                         Layout.bottomMargin: indicatorsColumnLayout.realSpacing
                         text: Network.materialSymbol
