@@ -245,17 +245,7 @@ Item { // Bar content region
                     color: Appearance.colors.colOnLayer0
                 }
                 Revealer {
-                    reveal: Notifications.silent || Notifications.unread > 0
-                    Layout.fillHeight: true
-                    Layout.rightMargin: reveal ? indicatorsRowLayout.realSpacing : 0
-                    implicitHeight: reveal ? notificationUnreadCount.implicitHeight : 0
-                    implicitWidth: reveal ? notificationUnreadCount.implicitWidth : 0
-                    Behavior on Layout.rightMargin {
-                        animation: Appearance.animation.elementMoveFast.numberAnimation.createObject(this)
-                    }
-                    NotificationUnreadCount {
-                        id: notificationUnreadCount
-                    }
+                    // Notification bell removed per user request
                 }
                 MaterialSymbol {
                     visible: BluetoothStatus.available
